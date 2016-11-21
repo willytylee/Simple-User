@@ -1,0 +1,25 @@
+<div class="form-auth">
+	<h2>Information</h2>
+	<div class="form-group">
+		<label>Username: </label>
+		{{current_user}}
+	</div>
+</div>
+<hr>
+<form class="form-auth" ng-submit="edit(user)" ng-show="authenticated">
+	<h2>Edit Information</h2>
+	<p class="text-warning">{{message}}</p>
+	<div class="form-group">
+		<label>Original Password</label>
+		<input type="password" ng-model="user.ori_password" placeholder="Original Password" class="form-control" required><br>
+	</div>
+	<div class="form-group">
+		<label>Password</label>
+		<input type="password" ng-model="user.password" placeholder="Password" class="form-control" required><br>
+	</div>
+	<div class="form-group">
+		<label>Confirm Password</label>
+		<input type="password" ng-model="user.confirm_password" placeholder="Confirm Password" class="form-control" required><br>
+	</div>
+	<input type="submit" value="Edit" class="btn btn-primary" />
+</form>
